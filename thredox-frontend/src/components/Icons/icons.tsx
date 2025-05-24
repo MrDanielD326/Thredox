@@ -127,6 +127,16 @@ export const TopIcon: FC = () => (
     />
 );
 
+export const OpenIcon: FC = () => (
+    <lord-icon
+        role="img"
+        aria-label="Open Icon"
+        src="https://cdn.lordicon.com/efmfrlbq.json"
+        trigger="loop-on-hover"
+        colors="primary:#078586,secondary:#918d10,tertiary:#ffffff"
+    />
+);
+
 export const IntroIcon: FC = () => (
     <lord-icon
         role="img"

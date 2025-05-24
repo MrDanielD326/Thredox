@@ -9,6 +9,7 @@ export const siteConfig = {
     appNavs: [{ label: "Creator", href: "/creator" }],
     links: {
         github: "https://github.com/MrDanielD326",
-        linkedin: "https://www.linkedin.com/in/danield326"
+        linkedin: "https://www.linkedin.com/in/danield326",
+        drive: "https://drive.google.com/file/d/14b1cRdpwdMeVdQp-94eNsfGm52L4Dqrk/view?usp=drivesdk"
     }
 };

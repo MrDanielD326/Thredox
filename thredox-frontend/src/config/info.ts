@@ -1,26 +1,8 @@
-export const landingInfo = [
-    {
-        title: "Secure OAuth Integration",
-        description: "Connect securely with Gmail API using OAuth authentication. No password storage required.",
-    },
-    {
-        title: "Real-time Archiving",
-        description: "Automatically capture and store emails within 5 minutes of receipt in PostgreSQL.",
-    },
-    {
-        title: "Smart Attachment Handling",
-        description: "Seamlessly store attachments in Google Drive with organized linking and metadata.",
-    },
-    {
-        title: "Complete Metadata Capture",
-        description: "Preserve all email metadata including sender, recipients, timestamps, and headers.",
-    },
-    {
-        title: "Thread Management",
-        description: "Maintain email conversation threading for better context and organization.",
-    },
-    {
-        title: "Duplicate Prevention",
-        description: "Smart detection system prevents duplicate email storage automatically.",
-    }
+export const thredoxInfo = [
+    { title: "Secure OAuth Integration", description: "Secure Gmail connection using OAuth authentication to protect your data." },
+    { title: "Real-time Archiving", description: "Instantly store all incoming emails in our PostgreSQL database system." },
+    { title: "Smart Attachment Handling", description: "Organize email attachments in Google Drive with searchable metadata tags." },
+    { title: "Complete Metadata Capture", description: "Track all email details including sender, recipients, timestamps and headers." },
+    { title: "Thread Management", description: "Group related email messages together to maintain conversation flow clearly." },
+    { title: "Duplicate Prevention", description: "Smart system automatically prevents duplicate emails from entering the archive." }
 ];

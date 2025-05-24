@@ -2,10 +2,9 @@ import { FeatureCard } from "@/components/Card/FeatureCard";
 import { hoverOff, hoverOn } from "@/components/Icons/iconLinks";
 import { IntroIcon, StartIcon } from "@/components/Icons/icons";
 import { subtitle, title } from "@/components/primitives";
-import { landingInfo } from "@/config/info";
+import { thredoxInfo } from "@/config/info";
 import AppLayout from "@/layouts/AppLayout";
 import { Button } from "@heroui/button";
-import { Card, CardBody, CardHeader } from "@heroui/react";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -33,7 +32,7 @@ export default function Landing() {
                     <br /> Your email archive, organized and compliant.
                 </div>
                 <Button
-                    color="secondary"
+                    color="success"
                     radius="full"
                     variant="flat"
                     endContent={<StartIcon id="start-icon" ref={iconRef} />}
@@ -45,7 +44,7 @@ export default function Landing() {
                 </Button>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-                {landingInfo.map(({ title, description }, index) => <FeatureCard key={index} title={title} description={description} />)}
+                {thredoxInfo.map(({ title, description }, index) => <FeatureCard key={index} title={title} description={description} />)}
             </div>
         </div>
     );
