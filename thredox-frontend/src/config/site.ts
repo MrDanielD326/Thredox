@@ -1,6 +1,5 @@
 export type SiteConfig = typeof siteConfig;
 
-
 export const siteConfig = {
     creator: 'Daniel\u00A0D',
     email: "daniel.elohi326@gmail.com",

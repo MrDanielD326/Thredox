@@ -13,9 +13,9 @@ export const AdminCard = () => {
 
     const infoText: Record<Exclude<iHover, null>, string> = {
         default: greeting,
-        email: "Contact me through Mail!",
-        github: "Check out my GitHub!",
-        linkedin: "Check out my LinkedIn!"
+        email: "Contact me through Mail !",
+        github: "Check out my GitHub !",
+        linkedin: "Check out my LinkedIn !"
     };
 
     const handleHover = (key: iHover) => () => setHovered(key);
@@ -27,7 +27,7 @@ export const AdminCard = () => {
     };
 
     return (
-        <Card isFooterBlurred isBlurred>
+        <Card isFooterBlurred isBlurred shadow="none">
             <CardHeader className="flex gap-3"> {infoText[hovered ?? "default"]} </CardHeader>
             <CardBody> <Image src={Photo} alt="Image" height={350} radius="sm" /> </CardBody>
             <CardFooter className="justify-between border-white/20 border-1 overflow-hidden py-1 absolute rounded-small bottom-3 w-[calc(100%_-_24px)] shadow-small ml-3 z-10">

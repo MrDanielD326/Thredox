@@ -15,7 +15,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
             <NavigationBar />
             <main className="container mx-auto max-w-7xl px-6 flex-grow pt-4"> {children} </main>
             <footer className="w-full flex items-center justify-center py-3">
-                {isPath ? <p className="text-center text-md text-[#e40c61] font-bold"> {notice} </p> : (
+                {isPath ? <p className="text-center text-md text-[#078586] font-bold"> {notice} </p> : (
                     <div className="flex gap-2">
                         <Link isExternal href={github}> <GithubIcon /> </Link>
                         <Link isExternal href={linkedin}> <LinkedInIcon /> </Link>

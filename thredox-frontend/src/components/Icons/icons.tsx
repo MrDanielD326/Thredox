@@ -11,7 +11,7 @@ const ThemeIcon = ({ size = 25, width, height, children, ...props }: iSVG & { ch
         width={width ?? size}
         {...props}
     >
-        <g fill="#900C3F"> {children} </g>
+        <g fill="#078586"> {children} </g>
     </svg>
 );
 
@@ -37,7 +37,7 @@ export const StartIcon = forwardRef<HTMLElement, { id: string }>((props, ref) =>
         aria-label="Start Icon"
         src="https://cdn.lordicon.com/ekuoyiqn.json"
         trigger="loop-on-hover"
-        colors="primary:#900C3F,secondary:#900C3F,tertiary:#ebe6ef,quaternary:#900C3F"
+        colors="primary:#078586,secondary:#078586,tertiary:#ebe6ef,quaternary:#078586"
     />
 ));
 
@@ -47,10 +47,10 @@ export const BrandIcon = forwardRef<HTMLElement, { id: string }>((props, ref) =>
         ref={ref}
         role="img"
         aria-label="Brand Icon"
-         src="https://cdn.lordicon.com/drdlomqk.json"
+        src="https://cdn.lordicon.com/drdlomqk.json"
         trigger="loop-on-hover"
         state="loop-spin"
-        colors="primary:#900c3f,secondary:#e50914,tertiary:#ffffff"
+        colors="primary:#078586,secondary:#66bcbd,tertiary:#ffffff"
     />
 ));
 
@@ -60,7 +60,7 @@ export const LinkedInIcon: FC = () => (
         aria-label="LinkedIn Icon"
         src="https://cdn.lordicon.com/fgctxlnd.json"
         trigger="loop-on-hover"
-        colors="primary:#900c3f,secondary:#ebe6ef"
+        colors="primary:#078586,secondary:#ebe6ef"
     />
 );
 
@@ -70,7 +70,7 @@ export const GithubIcon: FC = () => (
         aria-label="Github Icon"
         src="https://cdn.lordicon.com/ioihllwu.json"
         trigger="loop-on-hover"
-        colors="primary:#ffffff,secondary:#900c3f"
+        colors="primary:#ffffff,secondary:#078586"
     />
 );
 
@@ -80,7 +80,7 @@ export const UserIcon: FC = () => (
         aria-label="User Icon"
         src="https://cdn.lordicon.com/hroklero.json"
         trigger="loop-on-hover"
-        colors="primary:#900c3f,secondary:#900c3f"
+        colors="primary:#078586,secondary:#078586"
     />
 );
 
@@ -103,7 +103,7 @@ export const LoadingIcon: FC = () => (
         trigger="loop"
         stroke="bold"
         state="loop-cycle"
-        colors="primary:#900c3f,secondary:#e50914"
+        colors="primary:#078586,secondary:#66bcbd"
     />
 );
 
@@ -113,7 +113,7 @@ export const MailIcon: FC = () => (
         aria-label="Mail Icon"
         src="https://cdn.lordicon.com/dpggoewm.json"
         trigger="hover"
-        colors="primary:#5c0a33,secondary:#900c3f,tertiary:#c7166f"
+        colors="primary:#66bcbd,secondary:#078586,tertiary:#66bcbd"
     />
 );
 
@@ -124,7 +124,7 @@ export const IntroIcon: FC = () => (
         src="https://cdn.lordicon.com/mhnfcfpf.json"
         trigger="in"
         state="in-reveal"
-        colors="primary:#fad1e6,secondary:#900c3f,tertiary:#c7c116,quaternary:#3080e8"
+        colors="primary:#fad1e6,secondary:#078586,tertiary:#c7c116,quaternary:#3080e8"
         style={{ width: "350px", height: "350px" }}
     />
 );
