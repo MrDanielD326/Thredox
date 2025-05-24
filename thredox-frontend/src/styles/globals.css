@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* SCROLL BAR */
+/* Hide scrollbar by default */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 0;
 }
 
 ::-webkit-scrollbar-track {
@@ -18,8 +18,32 @@
     background-clip: content-box;
 }
 
+/* Firefox */
 * {
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: #078586 transparent;
 }
-/* SCROLL BAR */
+
+/* Show scrollbar when hovering near the right edge */
+.scrollbar-trigger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100vh;
+    z-index: 9999;
+}
+
+/* Show scrollbar on hover */
+.scrollbar-trigger:hover ~ div ::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.scrollbar-trigger:hover ~ div {
+    scrollbar-width: thin !important;
+}
+
+/* Apply to body */
+body {
+    overflow-y: auto;
+}

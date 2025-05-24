@@ -1,14 +1,24 @@
-import { GithubIcon, LinkedInIcon } from "@/components/Icons/icons";
+import { GithubIcon, LinkedInIcon, TopIcon } from "@/components/Icons/icons";
 import { NavigationBar } from "@/components/Navbar/NavigationBar";
 import { siteConfig } from "@/config/site";
 import { Link } from "@heroui/link";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Button } from "@heroui/button";
 
 export default function AppLayout({ children }: { children: ReactNode }) {
     const location = useLocation();
     const isPath = location.pathname === '/' || location.pathname === '/about';
     const { notice, links: { github, linkedin } } = siteConfig;
+    const [showScrollTop, setShowScrollTop] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => { setShowScrollTop(window.scrollY > 100) };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' }) };
 
     return (
         <div className="relative flex flex-col h-screen">
@@ -22,6 +32,13 @@ export default function AppLayout({ children }: { children: ReactNode }) {
                     </div>
                 )}
             </footer>
+            {showScrollTop && (
+                <Button className="fixed bottom-6 right-6 z-50 opacity-100 transition-opacity duration-300"
+                    color="secondary" radius="full" variant="flat" isIconOnly onPress={scrollToTop}
+                >
+                    <TopIcon />
+                </Button>
+            )}
         </div>
     );
 }

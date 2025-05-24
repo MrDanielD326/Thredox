@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Home from "@/pages/Home";
-import About from "./pages/About";
+import Creator from "./pages/Creator";
 
 function App() {
     const location = useLocation();
@@ -10,7 +10,7 @@ function App() {
     const routes = [
         { path: '/', page: <Landing /> },
         { path: '/home', page: <Home /> },
-        { path: '/about', page: <About /> }
+        { path: '/creator', page: <Creator /> }
     ];
 
     return (

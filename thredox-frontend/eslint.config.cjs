@@ -1,4 +1,3 @@
-const path = require("node:path");
 const { defineConfig, globalIgnores } = require("eslint/config");
 const { fixupConfigRules, fixupPluginRules } = require("@eslint/compat");
 const react = require("eslint-plugin-react");
@@ -39,7 +38,7 @@ module.exports = defineConfig([
         "!**/jest.config.js",
         "!**/plopfile.js",
         "!**/react-shim.js",
-        "!**/tsup.config.ts",
+        "!**/tsup.config.ts"
     ]),
     {
         extends: fixupConfigRules(
@@ -48,45 +47,38 @@ module.exports = defineConfig([
                 "plugin:prettier/recommended",
                 "plugin:react-hooks/recommended",
                 "plugin:jsx-a11y/recommended",
-            ),
+            )
         ),
-
         plugins: {
             react: fixupPluginRules(react),
             "unused-imports": unusedImports,
             import: fixupPluginRules(_import),
             "@typescript-eslint": typescriptEslint,
             "jsx-a11y": fixupPluginRules(jsxA11Y),
-            prettier: fixupPluginRules(prettier),
+            prettier: fixupPluginRules(prettier)
         },
-
         languageOptions: {
             globals: {
+                ...globals.node,
                 ...Object.fromEntries(
                     Object.entries(globals.browser).map(([key]) => [key, "off"]),
-                ),
-                ...globals.node,
+                )
             },
-
             parser: tsParser,
             ecmaVersion: 12,
             sourceType: "module",
-
             parserOptions: {
                 ecmaFeatures: {
                     jsx: true,
-                },
-            },
+                }
+            }
         },
-
         settings: {
             react: {
                 version: "detect",
-            },
+            }
         },
-
         files: ["**/*.ts", "**/*.tsx"],
-
         rules: {
             "no-console": "warn",
             "react/prop-types": "off",
@@ -99,16 +91,14 @@ module.exports = defineConfig([
             "no-unused-vars": "off",
             "unused-imports/no-unused-vars": "off",
             "unused-imports/no-unused-imports": "warn",
-
             "@typescript-eslint/no-unused-vars": [
                 "warn",
                 {
                     args: "after-used",
                     ignoreRestSiblings: false,
                     argsIgnorePattern: "^_.*?$",
-                },
+                }
             ],
-
             "import/order": [
                 "warn",
                 {
@@ -122,21 +112,17 @@ module.exports = defineConfig([
                         "sibling",
                         "index",
                     ],
-
                     pathGroups: [
                         {
                             pattern: "~/**",
                             group: "external",
                             position: "after",
-                        },
+                        }
                     ],
-
                     "newlines-between": "always",
                 },
             ],
-
             "react/self-closing-comp": "warn",
-
             "react/jsx-sort-props": [
                 "warn",
                 {
@@ -144,27 +130,26 @@ module.exports = defineConfig([
                     shorthandFirst: true,
                     noSortAlphabetically: false,
                     reservedFirst: true,
-                },
+                }
             ],
-
             "padding-line-between-statements": [
                 "warn",
                 {
                     blankLine: "always",
                     prev: "*",
-                    next: "return",
+                    next: "return"
                 },
                 {
                     blankLine: "always",
                     prev: ["const", "let", "var"],
-                    next: "*",
+                    next: "*"
                 },
                 {
                     blankLine: "any",
                     prev: ["const", "let", "var"],
-                    next: ["const", "let", "var"],
-                },
-            ],
-        },
-    },
+                    next: ["const", "let", "var"]
+                }
+            ]
+        }
+    }
 ]); 

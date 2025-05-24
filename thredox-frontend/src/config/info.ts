@@ -22,5 +22,5 @@ export const landingInfo = [
     {
         title: "Duplicate Prevention",
         description: "Smart detection system prevents duplicate email storage automatically.",
-    },
+    }
 ];

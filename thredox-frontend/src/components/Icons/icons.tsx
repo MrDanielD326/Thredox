@@ -50,7 +50,7 @@ export const BrandIcon = forwardRef<HTMLElement, { id: string }>((props, ref) =>
         src="https://cdn.lordicon.com/drdlomqk.json"
         trigger="loop-on-hover"
         state="loop-spin"
-        colors="primary:#078586,secondary:#66bcbd,tertiary:#ffffff"
+        colors="primary:#078586,secondary:#023030,tertiary:#ffffff"
     />
 ));
 
@@ -103,7 +103,7 @@ export const LoadingIcon: FC = () => (
         trigger="loop"
         stroke="bold"
         state="loop-cycle"
-        colors="primary:#078586,secondary:#66bcbd"
+        colors="primary:#078586,secondary:#023030"
     />
 );
 
@@ -113,7 +113,17 @@ export const MailIcon: FC = () => (
         aria-label="Mail Icon"
         src="https://cdn.lordicon.com/dpggoewm.json"
         trigger="hover"
-        colors="primary:#66bcbd,secondary:#078586,tertiary:#66bcbd"
+        colors="primary:#023030,secondary:#078586,tertiary:#023030"
+    />
+);
+
+export const TopIcon: FC = () => (
+    <lord-icon
+        role="img"
+        aria-label="Top Icon"
+        src="https://cdn.lordicon.com/boyimjcr.json"
+        trigger="loop-on-hover"
+        colors="primary:#078586"
     />
 );
 
