@@ -11,7 +11,7 @@ export default function Creator() {
                 <section className="flex flex-col items-center justify-center text-center max-w-lg w-full">
                     <div>
                         <span className={title()}> {brandName} by </span>
-                        <span className={title({ color: "primary" })}> {creator} </span>
+                        <span className={title({ color: "custom" })}> {creator} </span>
                         <div className={subtitle({ class: "mt-6" })}> {description} </div>
                     </div>
                 </section>

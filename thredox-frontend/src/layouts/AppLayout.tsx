@@ -5,6 +5,7 @@ import { Link } from "@heroui/link";
 import { ReactNode, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Button } from "@heroui/button";
+import { Tooltip } from "@heroui/react";
 
 export default function AppLayout({ children }: { children: ReactNode }) {
     const location = useLocation();
@@ -33,11 +34,13 @@ export default function AppLayout({ children }: { children: ReactNode }) {
                 )}
             </footer>
             {showScrollTop && (
-                <Button className="fixed bottom-6 right-6 z-50 opacity-100 transition-opacity duration-300"
-                    color="secondary" radius="full" variant="flat" isIconOnly onPress={scrollToTop}
-                >
-                    <TopIcon />
-                </Button>
+                <Tooltip showArrow color="secondary" placement="top-end" content="Go to top">
+                    <Button className="fixed bottom-6 right-6 z-50 opacity-100 transition-opacity duration-300"
+                        color="secondary" radius="full" variant="flat" isIconOnly onPress={scrollToTop}
+                    >
+                        <TopIcon />
+                    </Button>
+                </Tooltip>
             )}
         </div>
     );

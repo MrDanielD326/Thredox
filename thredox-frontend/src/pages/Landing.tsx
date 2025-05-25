@@ -2,7 +2,7 @@ import { FeatureCard } from "@/components/Card/FeatureCard";
 import { hoverOff, hoverOn } from "@/components/Icons/iconLinks";
 import { IntroIcon, StartIcon } from "@/components/Icons/icons";
 import { subtitle, title } from "@/components/primitives";
-import { thredoxInfo } from "@/config/info";
+import { ProjectInfo } from "@/config/info";
 import AppLayout from "@/layouts/AppLayout";
 import { Button } from "@heroui/button";
 import { useRef, useState } from "react";
@@ -26,7 +26,7 @@ export default function Landing() {
     const landingPageData = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
-                <span className={title({ color: "primary" })}> Secure Email Archives for G-Suite </span>
+                <span className={title({ color: "custom" })}> Secure Email Archives for G-Suite </span>
                 <div className={subtitle({ class: "mt-4 mb-4" })}>
                     Seamlessly capture and store incoming G-Suite emails with secure OAuth integration — no passwords needed.
                     <br /> Your email archive, organized and compliant.
@@ -44,7 +44,7 @@ export default function Landing() {
                 </Button>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-                {thredoxInfo.map(({ title, description }, index) => <FeatureCard key={index} title={title} description={description} />)}
+                {ProjectInfo.map(({ title, description }, index) => <FeatureCard key={index} title={title} description={description} />)}
             </div>
         </div>
     );

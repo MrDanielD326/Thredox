@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <AppLayout>
             <div className="inline-block max-w-lg text-center justify-center">
-                <span className={title({ color: "primary", size: "sm" })}> {greeting} </span>
+                <span className={title({ color: "custom", size: "sm" })}> {greeting} </span>
             </div>
             <span className={subtitle()}> {currentDate} </span>
             <br /> <Divider /> <br />
